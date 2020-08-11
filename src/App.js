@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <PhotoProduct />
-      <ProductInfo />
+      <ProductInfo category="LEBARAN" name="Pinky Swagg" />
     </div>
   );
 }
@@ -19,14 +19,14 @@ function PhotoProduct() {
   );
 }
 
-function ProductInfo() {
-  const category = "SNEAKER";
+function ProductInfo(props) {
+  const { category, name } = props;
   const price = 768000;
 
   return (
     <div className="Description">
       <p className="Cate">{category}</p>
-      <h1 className="Title">Pinky Swagg</h1>
+      <h1 className="Title">{name}</h1>
       <p className="Price">IDR {price}</p>
       <p className="Info">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nihil
