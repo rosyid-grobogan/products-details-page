@@ -3,25 +3,32 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
+  return <div className="App"></div>;
+}
+
+function PhotoProduct() {
+  return (
+    <div className="Photo">
+      <img src="sneaker.jpg" />
+    </div>
+  );
+}
+
+function ProductInfo() {
   const category = "SNEAKER";
   const price = 768000;
 
   return (
-    <div class="App">
-      <div class="Photo">
-        <img src="sneaker.jpg" />
-      </div>
-      <div class="Description">
-        <p class="Cate">{category}</p>
-        <h1 class="Title">Pinky Swagg</h1>
-        <p class="Price">IDR {price}</p>
-        <p class="Info">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora,
-          nihil laborum blanditiis veritatis, qui nostrum dolorem rerum
-          exercitationem tenetur dolore consectetur suscipit vel ratione,
-          eligendi magnam ad ab enim eos.
-        </p>
-      </div>
+    <div className="Description">
+      <p className="Cate">{category}</p>
+      <h1 className="Title">Pinky Swagg</h1>
+      <p className="Price">IDR {price}</p>
+      <p className="Info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nihil
+        laborum blanditiis veritatis, qui nostrum dolorem rerum exercitationem
+        tenetur dolore consectetur suscipit vel ratione, eligendi magnam ad ab
+        enim eos.
+      </p>
     </div>
   );
 }
