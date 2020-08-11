@@ -34,15 +34,15 @@ function ProductInfo(props) {
         tenetur dolore consectetur suscipit vel ratione, eligendi magnam ad ab
         enim eos.
       </p>
-      <a onClick={TambahCart} href="#">
+      <a onClick={(product) => TambahCart(name, product)} href="#">
         Add to Cart
       </a>
     </div>
   );
 }
 
-function TambahCart() {
-  console.log("Add to Cart");
+function TambahCart(product) {
+  console.log("Add to Cart " + product);
 }
 
 export default App;
