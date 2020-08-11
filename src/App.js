@@ -34,8 +34,15 @@ function ProductInfo(props) {
         tenetur dolore consectetur suscipit vel ratione, eligendi magnam ad ab
         enim eos.
       </p>
+      <a onClick={TambahCart} href="#">
+        Add to Cart
+      </a>
     </div>
   );
+}
+
+function TambahCart() {
+  console.log("Add to Cart");
 }
 
 export default App;
