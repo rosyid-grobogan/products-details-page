@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <PhotoProduct />
-      <ProductInfo category="LEBARAN" name="Pinky Swagg" />
+      <ProductInfo category="LEBARAN" name="Pinky Swagg" isDiscount="coming" />
     </div>
   );
 }
@@ -20,7 +20,7 @@ function PhotoProduct() {
 }
 
 function ProductInfo(props) {
-  const { category, name } = props;
+  const { category, name, isDiscount } = props;
   const price = 768000;
 
   return (
@@ -28,6 +28,7 @@ function ProductInfo(props) {
       <p className="Cate">{category}</p>
       <h1 className="Title">{name}</h1>
       <p className="Price">IDR {price}</p>
+      <CheckDiscount isDiscount={isDiscount} />
       <p className="Info">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, nihil
         laborum blanditiis veritatis, qui nostrum dolorem rerum exercitationem
@@ -43,6 +44,17 @@ function ProductInfo(props) {
 
 function TambahCart(product) {
   console.log("Add to Cart " + product);
+}
+
+function CheckDiscount(props) {
+  const { isDiscount } = props;
+  if (isDiscount == "yes") {
+    return <p>Diskon 50% Off</p>;
+  } else if (isDiscount == "coming") {
+    return <p>Akan ada diskon ..</p>;
+  } else {
+    return <p>Belum ada diskon</p>;
+  }
 }
 
 export default App;
