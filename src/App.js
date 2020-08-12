@@ -22,6 +22,12 @@ function PhotoProduct() {
 function ProductInfo(props) {
   const { category, name, isDiscount } = props;
   const price = 768000;
+  const benefits = [
+    "Tidak kusut terkena air",
+    "Bahan lebih halus",
+    "Tidak gerah",
+  ];
+  const listBenefits = benefits.map((itemBenefit) => <li>{itemBenefit}</li>);
 
   return (
     <div className="Description">
@@ -35,6 +41,9 @@ function ProductInfo(props) {
         tenetur dolore consectetur suscipit vel ratione, eligendi magnam ad ab
         enim eos.
       </p>
+      <ul>
+        <li>{listBenefits}</li>
+      </ul>
       <a onClick={(product) => TambahCart(name, product)} href="#">
         Add to Cart
       </a>
