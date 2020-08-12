@@ -61,3 +61,43 @@
   background: rgb(221, 135, 135);
   transition: all 0.8s;
 }
+
+.Description ul li {
+  padding-bottom: 10px;
+}
+
+.Review {
+  clear: both;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.Review h2 {
+  margin-top: 50px;
+}
+
+.Review img {
+  width: 80px;
+  height: 80px;
+  /* background: #b1b1b1; */
+  float: left;
+  margin-right: 16px;
+  border-radius: 40px;
+}
+
+.Review .User p,
+h3 {
+  margin: 0;
+}
+
+.Review .User h3 {
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+
+.Review .Item {
+  width: 80%;
+  overflow: hidden;
+  margin-bottom: 24px;
+}

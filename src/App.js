@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <PhotoProduct />
       <ProductInfo category="LEBARAN" name="Pinky Swagg" isDiscount="coming" />
+      <ReviewItems />
     </div>
   );
 }
@@ -49,10 +50,12 @@ function ProductInfo(props) {
   );
 }
 
+// Event
 function TambahCart(product) {
   console.log("Add to Cart " + product);
 }
 
+// Conditional
 function CheckDiscount(props) {
   const { isDiscount } = props;
   if (isDiscount == "yes") {
@@ -62,6 +65,41 @@ function CheckDiscount(props) {
   } else {
     return <p>Belum ada diskon</p>;
   }
+}
+
+function ReviewItems() {
+  // data JSON
+  const users = [
+    {
+      id: 1,
+      image: "user1.png",
+      name: "Anna Cabella",
+      review: "Harga murah tapi kualitas bagus",
+    },
+    {
+      id: 2,
+      image: "user1.png",
+      name: "Angle Cabella",
+      review: "Terimakasih, barangnya sudah sampai",
+    },
+  ];
+
+  const listReview = users.map((itemReview) => (
+    <div className="Item">
+      <img src={itemReview.image} />
+      <div className="User">
+        <h3>{itemReview.name}</h3>
+        <p>{itemReview.review}</p>
+      </div>
+    </div>
+  ));
+
+  return (
+    <div className="Review">
+      <h2>Reviews</h2>
+      {listReview}
+    </div>
+  );
 }
 
 export default App;
