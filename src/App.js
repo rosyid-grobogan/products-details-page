@@ -41,9 +41,7 @@ function ProductInfo(props) {
         tenetur dolore consectetur suscipit vel ratione, eligendi magnam ad ab
         enim eos.
       </p>
-      <ul>
-        <li>{listBenefits}</li>
-      </ul>
+      <ul>{listBenefits}</ul>
       <a onClick={(product) => TambahCart(name, product)} href="#">
         Add to Cart
       </a>
